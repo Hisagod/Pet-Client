@@ -39,7 +39,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.atguigu.mobileplayer2.activity.SplashActivity">
+        <activity android:name="com.aib.other.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
