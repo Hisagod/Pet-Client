@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
 
 import com.aib.base.activity.BaseActivity;
+import com.aib.ui.center.fragment.CenterFragment;
 import com.aib.ui.video.fragment.LocalVideoFragment;
 import com.aib.ui.video.fragment.NetVideoFragment;
 import com.aib.player.R;
@@ -16,8 +17,16 @@ import com.aib.player.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseActivity<ActivityMainBinding> {
+import javax.inject.Inject;
+
+import dagger.android.AndroidInjector;
+import dagger.android.DispatchingAndroidInjector;
+import dagger.android.support.HasSupportFragmentInjector;
+
+public class MainActivity extends BaseActivity<ActivityMainBinding>  {
     private List<Fragment> fragments = new ArrayList<>();
+
+
 
     @Override
     public int getResId() {
@@ -30,7 +39,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         fragments.add(new LocalVideoFragment());
         fragments.add(new NetVideoFragment());
         fragments.add(new LocalVideoFragment());
-        fragments.add(new NetVideoFragment());
+        fragments.add(new CenterFragment());
 
         binding.bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -45,7 +54,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
                     case R.id.btn_local_voice:
                         switchFragment(2);
                         return true;
-                    case R.id.btn_net_voice:
+                    case R.id.btn_center:
                         switchFragment(3);
                         return true;
                 }
@@ -74,4 +83,5 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         }
         ft.commit();
     }
+
 }

@@ -1,15 +1,22 @@
-package com.aib.ui.other.activity;
+package com.aib.ui.splash;
 
 import android.os.Bundle;
 
 import com.aib.base.activity.BaseActivity;
+import com.aib.net.ApiService;
 import com.aib.player.R;
 import com.aib.player.databinding.ActivitySplashBinding;
+import com.aib.ui.other.activity.MainActivity;
+import com.atguigu.mobileplayer2.utils.LogUtil;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.PermissionUtils;
 
+import javax.inject.Inject;
+
 
 public class SplashActivity extends BaseActivity<ActivitySplashBinding> {
+    @Inject
+    ApiService api;
     private String[] permissions = {
             "android.permission.READ_EXTERNAL_STORAGE"
     };
@@ -24,6 +31,7 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding> {
 
         requestPermission();
 
+        LogUtil.e(api.toString());
     }
 
     private void requestPermission() {
