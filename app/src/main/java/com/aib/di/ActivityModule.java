@@ -1,7 +1,7 @@
 package com.aib.di;
 
 
-import com.aib.ui.other.activity.MainActivity;
+import com.aib.ui.home.MainActivity;
 import com.aib.ui.splash.SplashActivity;
 
 import dagger.Module;
@@ -12,6 +12,6 @@ public abstract class ActivityModule {
     @ContributesAndroidInjector
     abstract SplashActivity splashActivity();
 
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(modules = FragmentModule.class)
     abstract MainActivity mainActivity();
 }

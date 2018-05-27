@@ -1,4 +1,4 @@
-package com.aib.ui.video.fragment;
+package com.aib.ui.home;
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;

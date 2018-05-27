@@ -1,12 +1,10 @@
 package com.aib.di;
 
+
 import com.aib.net.ApiService;
 import com.blankj.utilcode.util.LogUtils;
-
 import java.util.concurrent.TimeUnit;
-
 import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
@@ -15,7 +13,7 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-@Module
+@Module(includes = ViewModelModule.class)
 public class AppModule {
     @Singleton
     @Provides

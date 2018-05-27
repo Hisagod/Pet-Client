@@ -31,6 +31,7 @@ public class BaseApplication extends Application implements HasActivityInjector 
 
     @Inject
     DispatchingAndroidInjector<Activity> dispatchingAndroidInjector;
+    private static Context ctx;
 
     @Override
     public void onCreate() {
@@ -43,6 +44,8 @@ public class BaseApplication extends Application implements HasActivityInjector 
         // 请勿在“ =” 与 appid 之间添加任务空字符或者转义符
         SpeechUtility.createUtility(this, SpeechConstant.APPID + "=5795c210");
 
+        ctx = getApplicationContext();
+
         //Utils工具类初始化
         Utils.init(this);
 
@@ -54,7 +57,7 @@ public class BaseApplication extends Application implements HasActivityInjector 
      * Dagger2注入
      */
     private void daggerInject() {
-        DaggerAppComponent.builder().build().inject(this);
+        DaggerAppComponent.builder().application(this).build().inject(this);
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             @Override
             public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
@@ -112,5 +115,9 @@ public class BaseApplication extends Application implements HasActivityInjector 
     @Override
     public AndroidInjector<Activity> activityInjector() {
         return dispatchingAndroidInjector;
+    }
+
+    public static Context getContext() {
+        return ctx;
     }
 }
