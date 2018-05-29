@@ -1,14 +1,14 @@
-package com.aib.ui.splash;
+package com.aib.ui.other.activity;
 
 import android.os.Bundle;
 
 import com.aib.base.activity.BaseActivity;
 import com.aib.player.R;
 import com.aib.player.databinding.ActivitySplashBinding;
-import com.aib.ui.home.MainActivity;;
+;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.PermissionUtils;
-
+import com.blankj.utilcode.util.ToastUtils;
 
 
 public class SplashActivity extends BaseActivity<ActivitySplashBinding> {
@@ -37,7 +37,8 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding> {
 
             @Override
             public void onDenied() {
-
+                ToastUtils.showShort("拒绝授权");
+                finish();
             }
         }).request();
     }

@@ -1,4 +1,4 @@
-package com.aib.ui.home;
+package com.aib.ui.other.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import com.aib.base.activity.BaseActivity;
 import com.aib.player.R;
 import com.aib.player.databinding.ActivityMainBinding;
+import com.aib.ui.center.fragment.CenterFragment;
+import com.aib.ui.movie.fragment.VideoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,26 +28,18 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     @Override
     public void initData(Bundle savedInstanceState) {
 
-        fragments.add(new LocalVideoFragment());
         fragments.add(new VideoFragment());
-        fragments.add(new LocalVideoFragment());
         fragments.add(new CenterFragment());
 
         binding.bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.btn_local_video:
+                    case R.id.btn_movie:
                         switchFragment(0);
                         return true;
-                    case R.id.btn_net_video:
-                        switchFragment(1);
-                        return true;
-                    case R.id.btn_local_voice:
-                        switchFragment(2);
-                        return true;
                     case R.id.btn_center:
-                        switchFragment(3);
+                        switchFragment(1);
                         return true;
                 }
                 return false;

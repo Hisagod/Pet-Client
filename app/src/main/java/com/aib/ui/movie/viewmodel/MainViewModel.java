@@ -1,9 +1,11 @@
-package com.aib.ui.home;
+package com.aib.ui.movie.viewmodel;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.ViewModel;
 
 import com.aib.net.Resource;
+import com.aib.ui.movie.entity.VideoEntity;
+import com.aib.ui.movie.repository.MainRepository;
 
 import javax.inject.Inject;
 

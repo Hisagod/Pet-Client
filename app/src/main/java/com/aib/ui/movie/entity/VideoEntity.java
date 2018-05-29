@@ -1,4 +1,4 @@
-package com.aib.ui.home;
+package com.aib.ui.movie.entity;
 
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;

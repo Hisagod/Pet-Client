@@ -1,9 +1,9 @@
 package com.aib.di;
 
 
-import com.aib.ui.home.CenterFragment;
+import com.aib.ui.center.fragment.CenterFragment;
 import com.aib.ui.home.LocalVideoFragment;
-import com.aib.ui.home.VideoFragment;
+import com.aib.ui.movie.fragment.VideoFragment;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

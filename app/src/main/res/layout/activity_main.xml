@@ -74,6 +74,11 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/color_888888" />
+
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/bnv"
             android:layout_width="match_parent"

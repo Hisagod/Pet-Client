@@ -1,8 +1,8 @@
 package com.aib.di;
 
 
-import com.aib.ui.home.MainActivity;
-import com.aib.ui.splash.SplashActivity;
+import com.aib.ui.other.activity.MainActivity;
+import com.aib.ui.other.activity.SplashActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

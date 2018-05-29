@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/btn_local_video"
-        android:icon="@drawable/ic_battery_0"
-        android:title="本地视频" />
-    <item
-        android:id="@+id/btn_net_video"
-        android:icon="@drawable/ic_battery_0"
-        android:title="网络视频" />
-    <item
-        android:id="@+id/btn_local_voice"
-        android:icon="@drawable/ic_battery_0"
-        android:title="本地音频" />
+        android:id="@+id/btn_movie"
+        android:icon="@drawable/ic_main_movie"
+        android:title="影视" />
     <item
         android:id="@+id/btn_center"
-        android:icon="@drawable/ic_battery_0"
+        android:icon="@drawable/ic_main_center"
         android:title="中心" />
 </menu>

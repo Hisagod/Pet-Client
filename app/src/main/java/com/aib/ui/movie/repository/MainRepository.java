@@ -1,4 +1,4 @@
-package com.aib.ui.home;
+package com.aib.ui.movie.repository;
 
 
 import android.arch.lifecycle.LiveData;
@@ -6,10 +6,8 @@ import android.arch.lifecycle.LiveData;
 import com.aib.net.ApiService;
 import com.aib.net.NetworkResource;
 import com.aib.net.Resource;
+import com.aib.ui.movie.entity.VideoEntity;
 import com.blankj.utilcode.util.CacheUtils;
-import com.google.gson.Gson;
-
-import java.io.Serializable;
 
 import javax.inject.Inject;
 

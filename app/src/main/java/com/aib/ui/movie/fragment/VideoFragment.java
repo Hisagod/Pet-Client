@@ -1,4 +1,4 @@
-package com.aib.ui.home;
+package com.aib.ui.movie.fragment;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
@@ -7,11 +7,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.aib.base.fragment.BaseFragment;
-import com.aib.net.ApiService;
 import com.aib.net.Resource;
 import com.aib.player.R;
 import com.aib.player.databinding.FragmentVideoBinding;
-import com.blankj.utilcode.util.ToastUtils;
+import com.aib.ui.movie.viewmodel.MainViewModel;
+import com.aib.ui.movie.entity.VideoEntity;
 
 import javax.inject.Inject;
 

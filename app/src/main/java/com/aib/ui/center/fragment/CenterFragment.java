@@ -1,4 +1,4 @@
-package com.aib.ui.home;
+package com.aib.ui.center.fragment;
 
 import android.os.Bundle;
 

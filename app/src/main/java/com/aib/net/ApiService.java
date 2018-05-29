@@ -1,11 +1,8 @@
 package com.aib.net;
 
-import com.aib.ui.home.VideoEntity;
-
-import java.util.List;
+import com.aib.ui.movie.entity.VideoEntity;
 
 import io.reactivex.Observable;
-import okhttp3.ResponseBody;
 import retrofit2.http.GET;
 
 public interface ApiService {
