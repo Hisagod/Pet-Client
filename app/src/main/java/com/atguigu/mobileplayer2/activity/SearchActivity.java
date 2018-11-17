@@ -12,25 +12,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aib.player.R;
+import com.aib.mgt.R;
 import com.atguigu.mobileplayer2.adapter.SearchAdapter;
 import com.atguigu.mobileplayer2.domain.SearchBean;
 import com.atguigu.mobileplayer2.utils.Constants;
 import com.atguigu.mobileplayer2.utils.JsonParser;
 import com.google.gson.Gson;
-import com.iflytek.cloud.ErrorCode;
-import com.iflytek.cloud.InitListener;
-import com.iflytek.cloud.RecognizerResult;
-import com.iflytek.cloud.SpeechConstant;
-import com.iflytek.cloud.SpeechError;
-import com.iflytek.cloud.ui.RecognizerDialog;
-import com.iflytek.cloud.ui.RecognizerDialogListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.xutils.common.Callback;
-import org.xutils.http.RequestParams;
-import org.xutils.x;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -116,28 +106,28 @@ public class SearchActivity extends Activity {
 
     private void getDataFromNet() {
         progressBar.setVisibility(View.VISIBLE);
-        RequestParams params = new RequestParams(url);
-        x.http().get(params, new Callback.CommonCallback<String>() {
-            @Override
-            public void onSuccess(String result) {
-                processData(result);
-            }
-
-            @Override
-            public void onError(Throwable ex, boolean isOnCallback) {
-                progressBar.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onCancelled(CancelledException cex) {
-
-            }
-
-            @Override
-            public void onFinished() {
-                progressBar.setVisibility(View.GONE);
-            }
-        });
+//        RequestParams params = new RequestParams(url);
+//        x.http().get(params, new Callback.CommonCallback<String>() {
+//            @Override
+//            public void onSuccess(String result) {
+//                processData(result);
+//            }
+//
+//            @Override
+//            public void onError(Throwable ex, boolean isOnCallback) {
+//                progressBar.setVisibility(View.GONE);
+//            }
+//
+//            @Override
+//            public void onCancelled(CancelledException cex) {
+//
+//            }
+//
+//            @Override
+//            public void onFinished() {
+//                progressBar.setVisibility(View.GONE);
+//            }
+//        });
     }
 
     private void processData(String result) {
@@ -181,78 +171,78 @@ public class SearchActivity extends Activity {
 
 
     private void showDialog() {
-        //1.创建RecognizerDialog对象
-        RecognizerDialog mDialog = new RecognizerDialog(this, new MyInitListener());
-        //2.设置accent、 language等参数
-        mDialog.setParameter(SpeechConstant.LANGUAGE, "zh_cn");//中文
-        mDialog.setParameter(SpeechConstant.ACCENT, "mandarin");//普通话
-        //若要将UI控件用于语义理解，必须添加以下参数设置，设置之后onResult回调返回将是语义理解
-        //结果
-        // mDialog.setParameter("asr_sch", "1");
-        // mDialog.setParameter("nlp_version", "2.0");
-        //3.设置回调接口
-        mDialog.setListener(new MyRecognizerDialogListener());
-        //4.显示dialog，接收语音输入
-        mDialog.show();
+//        //1.创建RecognizerDialog对象
+//        RecognizerDialog mDialog = new RecognizerDialog(this, new MyInitListener());
+//        //2.设置accent、 language等参数
+//        mDialog.setParameter(SpeechConstant.LANGUAGE, "zh_cn");//中文
+//        mDialog.setParameter(SpeechConstant.ACCENT, "mandarin");//普通话
+//        //若要将UI控件用于语义理解，必须添加以下参数设置，设置之后onResult回调返回将是语义理解
+//        //结果
+//        // mDialog.setParameter("asr_sch", "1");
+//        // mDialog.setParameter("nlp_version", "2.0");
+//        //3.设置回调接口
+//        mDialog.setListener(new MyRecognizerDialogListener());
+//        //4.显示dialog，接收语音输入
+//        mDialog.show();
     }
 
-    class MyRecognizerDialogListener implements RecognizerDialogListener {
+//    class MyRecognizerDialogListener implements RecognizerDialogListener {
+//
+//        /**
+//         * @param recognizerResult
+//         * @param b                是否说话结束
+//         */
+//        @Override
+//        public void onResult(RecognizerResult recognizerResult, boolean b) {
+//            String result = recognizerResult.getResultString();
+//            Log.e("MainActivity", "result ==" + result);
+//            String text = JsonParser.parseIatResult(result);
+//            //解析好的
+//            Log.e("MainActivity", "text ==" + text);
+//
+//            String sn = null;
+//            // 读取json结果中的sn字段
+//            try {
+//                JSONObject resultJson = new JSONObject(recognizerResult.getResultString());
+//                sn = resultJson.optString("sn");
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//
+//            mIatResults.put(sn, text);
+//
+//            StringBuffer resultBuffer = new StringBuffer();//拼成一句
+//            for (String key : mIatResults.keySet()) {
+//                resultBuffer.append(mIatResults.get(key));
+//            }
+//
+//            etInput.setText(resultBuffer.toString());
+//            etInput.setSelection(etInput.length());
+//
+//        }
+//
+//        /**
+//         * 出错了
+//         *
+//         * @param speechError
+//         */
+//        @Override
+//        public void onError(SpeechError speechError) {
+//            Log.e("MainActivity", "onError ==" + speechError.getMessage());
+//
+//        }
+//    }
 
-        /**
-         * @param recognizerResult
-         * @param b                是否说话结束
-         */
-        @Override
-        public void onResult(RecognizerResult recognizerResult, boolean b) {
-            String result = recognizerResult.getResultString();
-            Log.e("MainActivity", "result ==" + result);
-            String text = JsonParser.parseIatResult(result);
-            //解析好的
-            Log.e("MainActivity", "text ==" + text);
 
-            String sn = null;
-            // 读取json结果中的sn字段
-            try {
-                JSONObject resultJson = new JSONObject(recognizerResult.getResultString());
-                sn = resultJson.optString("sn");
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-            mIatResults.put(sn, text);
-
-            StringBuffer resultBuffer = new StringBuffer();//拼成一句
-            for (String key : mIatResults.keySet()) {
-                resultBuffer.append(mIatResults.get(key));
-            }
-
-            etInput.setText(resultBuffer.toString());
-            etInput.setSelection(etInput.length());
-
-        }
-
-        /**
-         * 出错了
-         *
-         * @param speechError
-         */
-        @Override
-        public void onError(SpeechError speechError) {
-            Log.e("MainActivity", "onError ==" + speechError.getMessage());
-
-        }
-    }
-
-
-    class MyInitListener implements InitListener {
-
-        @Override
-        public void onInit(int i) {
-            if (i != ErrorCode.SUCCESS) {
-                Toast.makeText(SearchActivity.this, "初始化失败", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
+//    class MyInitListener implements InitListener {
+//
+//        @Override
+//        public void onInit(int i) {
+//            if (i != ErrorCode.SUCCESS) {
+//                Toast.makeText(SearchActivity.this, "初始化失败", Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//    }
 
 
 }

@@ -1,6 +1,6 @@
 package com.aib.net;
 
-import com.aib.ui.movie.entity.VideoEntity;
+import com.aib.entity.VideoEntity;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;

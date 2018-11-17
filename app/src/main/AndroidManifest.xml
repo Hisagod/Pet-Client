@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.aib.player">
+    package="com.aib.mgt">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -33,13 +33,13 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name="com.aib.base.application.BaseApplication"
+        android:name="com.aib.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.aib.ui.other.activity.SplashActivity">
+        <activity android:name="com.aib.view.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,7 +47,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.aib.ui.other.activity.MainActivity"
+            android:name="com.aib.view.activity.MainActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:label="@string/app_name2" />
         <activity

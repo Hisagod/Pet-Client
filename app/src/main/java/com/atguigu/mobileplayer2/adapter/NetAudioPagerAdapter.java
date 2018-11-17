@@ -9,14 +9,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.aib.player.R;
+import com.aib.mgt.R;
 import com.atguigu.mobileplayer2.domain.NetAudioPagerData;
 import com.atguigu.mobileplayer2.utils.Utils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
-import org.xutils.common.util.DensityUtil;
-import org.xutils.x;
 
 import java.util.List;
 
@@ -158,10 +156,10 @@ public class NetAudioPagerAdapter extends BaseAdapter {
             case TYPE_IMAGE://图片
                 bindData(viewHolder, mediaItem);
                 viewHolder.iv_image_icon.setImageResource(R.drawable.bg_item);
-                int height = mediaItem.getImage().getHeight() <= DensityUtil.getScreenHeight() * 0.75 ? mediaItem.getImage().getHeight() : (int) (DensityUtil.getScreenHeight() * 0.75);
+//                int height = mediaItem.getImage().getHeight() <= DensityUtil.getScreenHeight() * 0.75 ? mediaItem.getImage().getHeight() : (int) (DensityUtil.getScreenHeight() * 0.75);
 
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(DensityUtil.getScreenWidth(), height);
-                viewHolder.iv_image_icon.setLayoutParams(params);
+//                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(DensityUtil.getScreenWidth(), height);
+//                viewHolder.iv_image_icon.setLayoutParams(params);
                 if (mediaItem.getImage() != null && mediaItem.getImage().getBig() != null && mediaItem.getImage().getBig().size() > 0) {
 //                    x.image().bind(viewHolder.iv_image_icon, mediaItem.getImage().getBig().get(0));
                     Glide.with(context).load(mediaItem.getImage().getBig().get(0)).placeholder(R.drawable.bg_item).error(R.drawable.bg_item).diskCacheStrategy(DiskCacheStrategy.ALL).into(viewHolder.iv_image_icon);
@@ -247,7 +245,7 @@ public class NetAudioPagerAdapter extends BaseAdapter {
 
     private void bindData(ViewHolder viewHolder, NetAudioPagerData.ListEntity mediaItem) {
         if (mediaItem.getU() != null && mediaItem.getU().getHeader() != null && mediaItem.getU().getHeader().get(0) != null) {
-            x.image().bind(viewHolder.iv_headpic, mediaItem.getU().getHeader().get(0));
+
         }
         if (mediaItem.getU() != null && mediaItem.getU().getName() != null) {
             viewHolder.tv_name.setText(mediaItem.getU().getName() + "");

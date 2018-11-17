@@ -21,7 +21,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aib.player.R;
+import com.aib.mgt.R;
 import com.atguigu.mobileplayer2.IMusicPlayerService;
 import com.atguigu.mobileplayer2.domain.MediaItem;
 import com.atguigu.mobileplayer2.service.MusicPlayerService;

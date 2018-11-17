@@ -3,7 +3,7 @@ package com.aib.di;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
-import com.aib.ui.movie.viewmodel.MainViewModel;
+import com.aib.viewmodel.MainViewModel;
 import com.aib.viewmodel.ViewModelFactory;
 
 import dagger.Binds;

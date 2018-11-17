@@ -17,7 +17,7 @@ import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
-import com.aib.player.R;
+import com.aib.mgt.R;
 import com.atguigu.mobileplayer2.IMusicPlayerService;
 import com.atguigu.mobileplayer2.activity.AudioPlayerActivity;
 import com.atguigu.mobileplayer2.domain.MediaItem;
