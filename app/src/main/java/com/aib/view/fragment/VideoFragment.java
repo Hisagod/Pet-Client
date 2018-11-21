@@ -15,8 +15,6 @@ import javax.inject.Inject;
  * 视频
  */
 public class VideoFragment extends BaseFragment<ViewDataBinding> {
-    @Inject
-    ViewModelProvider.Factory viewModelFactory;
 
     @Override
     public int getResId() {
@@ -25,7 +23,6 @@ public class VideoFragment extends BaseFragment<ViewDataBinding> {
 
     @Override
     public void initData(Bundle savedInstanceState) {
-        MainViewModel vm = ViewModelProviders.of(this, viewModelFactory).get(MainViewModel.class);
 
     }
 }
