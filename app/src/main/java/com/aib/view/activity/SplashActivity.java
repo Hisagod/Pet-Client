@@ -3,8 +3,7 @@ package com.aib.view.activity;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 
-import com.aib.mgt.R;
-;
+import com.aib.loto.R;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.PermissionUtils;
 import com.blankj.utilcode.util.ToastUtils;

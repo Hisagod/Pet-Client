@@ -1,6 +1,5 @@
 package com.atguigu.mobileplayer2.activity;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -21,7 +20,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aib.mgt.R;
+import com.aib.loto.R;
 import com.atguigu.mobileplayer2.IMusicPlayerService;
 import com.atguigu.mobileplayer2.domain.MediaItem;
 import com.atguigu.mobileplayer2.service.MusicPlayerService;

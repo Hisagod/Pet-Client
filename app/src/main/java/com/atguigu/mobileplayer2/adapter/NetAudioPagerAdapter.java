@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.aib.mgt.R;
+import com.aib.loto.R;
 import com.atguigu.mobileplayer2.domain.NetAudioPagerData;
 import com.atguigu.mobileplayer2.utils.Utils;
 import com.bumptech.glide.Glide;

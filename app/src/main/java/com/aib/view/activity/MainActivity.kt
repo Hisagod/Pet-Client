@@ -3,8 +3,8 @@ package com.aib.view.activity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
-import com.aib.mgt.R
-import com.aib.mgt.databinding.ActivityMainBinding
+import com.aib.loto.R
+import com.aib.loto.databinding.ActivityMainBinding
 import com.aib.view.fragment.CenterFragment
 import com.aib.view.fragment.VideoFragment
 import com.blankj.utilcode.util.ActivityUtils

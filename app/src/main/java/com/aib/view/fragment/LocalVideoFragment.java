@@ -13,8 +13,8 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.aib.mgt.R;
-import com.aib.mgt.databinding.VideoPagerBinding;
+import com.aib.loto.R;
+import com.aib.loto.databinding.VideoPagerBinding;
 import com.atguigu.mobileplayer2.activity.SystemVideoPlayer;
 import com.atguigu.mobileplayer2.adapter.VideoPagerAdapter;
 import com.atguigu.mobileplayer2.domain.MediaItem;

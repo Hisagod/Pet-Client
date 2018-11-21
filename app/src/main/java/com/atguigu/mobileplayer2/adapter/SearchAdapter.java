@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.aib.mgt.R;
+import com.aib.loto.R;
 import com.atguigu.mobileplayer2.domain.SearchBean;
 import com.squareup.picasso.Picasso;
 

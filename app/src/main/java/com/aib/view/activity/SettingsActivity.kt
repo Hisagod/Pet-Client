@@ -1,8 +1,9 @@
 package com.aib.view.activity
 
 import android.os.Bundle
-import com.aib.mgt.R
-import com.aib.mgt.databinding.ActivitySettingsBinding
+import com.aib.loto.R
+import com.aib.loto.databinding.ActivitySettingsBinding
+
 
 /**
  * 更多设置

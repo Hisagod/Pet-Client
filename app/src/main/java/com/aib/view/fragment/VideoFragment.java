@@ -1,14 +1,9 @@
 package com.aib.view.fragment;
 
-import android.arch.lifecycle.ViewModelProvider;
-import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 
-import com.aib.mgt.R;
-import com.aib.viewmodel.MainViewModel;
-
-import javax.inject.Inject;
+import com.aib.loto.R;
 
 
 /**

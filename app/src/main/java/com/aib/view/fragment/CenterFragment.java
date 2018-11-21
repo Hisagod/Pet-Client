@@ -3,7 +3,8 @@ package com.aib.view.fragment;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 
-import com.aib.mgt.R;
+import com.aib.loto.R;
+
 
 public class CenterFragment extends BaseFragment<ViewDataBinding> {
     @Override

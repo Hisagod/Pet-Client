@@ -12,7 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aib.mgt.R;
+import com.aib.loto.R;
 import com.atguigu.mobileplayer2.adapter.SearchAdapter;
 import com.atguigu.mobileplayer2.domain.SearchBean;
 import com.atguigu.mobileplayer2.utils.Constants;
