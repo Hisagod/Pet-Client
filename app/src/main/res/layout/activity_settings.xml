@@ -11,15 +11,8 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/tb"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:background="@color/colorPrimary"
-            app:contentInsetStart="0dp"
-            app:contentInsetStartWithNavigation="0dp"
-            app:navigationIcon="@drawable/ic_back_white"
-            app:title="更多设置"
-            app:titleTextAppearance="@android:style/TextAppearance.Material.Widget.Toolbar.Subtitle"
-            app:titleTextColor="@android:color/white" />
+            style="@style/toolbar_style"
+            app:title="更多设置" />
 
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -55,6 +48,24 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_help"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="帮助"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_about"
+                        android:drawablePadding="10dp"
                         android:gravity="center_vertical"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"

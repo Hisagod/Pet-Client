@@ -1,7 +1,8 @@
 package com.aib.di
 
 
-import com.aib.view.activity.MainActivity
+import com.aib.view.activity.HomeActivity
+import com.aib.view.activity.RegisterActivity
 import com.aib.view.activity.SettingsActivity
 import com.aib.view.activity.SplashActivity
 
@@ -23,11 +24,17 @@ internal abstract class ActivityModule {
      * 主页
      */
     @ContributesAndroidInjector
-    internal abstract fun MainActivity(): MainActivity
+    internal abstract fun MainActivity(): HomeActivity
 
     /**
      * 全部设置
      */
     @ContributesAndroidInjector
     internal abstract fun SettingsActivity(): SettingsActivity
+
+    /**
+     * 注册
+     */
+    @ContributesAndroidInjector
+    internal abstract fun RegisterActivity(): RegisterActivity
 }

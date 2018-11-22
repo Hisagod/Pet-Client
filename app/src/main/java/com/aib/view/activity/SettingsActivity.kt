@@ -1,8 +1,8 @@
 package com.aib.view.activity
 
 import android.os.Bundle
-import com.aib.loto.R
-import com.aib.loto.databinding.ActivitySettingsBinding
+import com.aib.ll.R
+import com.aib.ll.databinding.ActivitySettingsBinding
 
 
 /**
