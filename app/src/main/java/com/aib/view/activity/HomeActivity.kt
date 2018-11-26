@@ -21,9 +21,6 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     override fun getResId(): Int = R.layout.activity_home
 
     override fun initData(savedInstanceState: Bundle?) {
-
-        LogUtils.e(factory.toString())
-
         fragments.add(VideoFragment())
         fragments.add(CenterFragment())
 
@@ -82,5 +79,4 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         }
         ft.commit()
     }
-
 }

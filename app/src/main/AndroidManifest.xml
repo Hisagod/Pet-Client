@@ -25,7 +25,10 @@
             android:name="com.aib.view.activity.SettingsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <activity android:name="com.aib.view.activity.RegisterActivity"></activity>
+        <activity
+            android:name="com.aib.view.activity.RegisterActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.aib.view.activity.LoginActivity"></activity>
     </application>
 
 </manifest>

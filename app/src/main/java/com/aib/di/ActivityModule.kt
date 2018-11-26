@@ -1,10 +1,7 @@
 package com.aib.di
 
 
-import com.aib.view.activity.HomeActivity
-import com.aib.view.activity.RegisterActivity
-import com.aib.view.activity.SettingsActivity
-import com.aib.view.activity.SplashActivity
+import com.aib.view.activity.*
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -37,4 +34,10 @@ internal abstract class ActivityModule {
      */
     @ContributesAndroidInjector
     internal abstract fun RegisterActivity(): RegisterActivity
+
+    /**
+     * 登录
+     */
+    @ContributesAndroidInjector
+    internal abstract fun LoginActivity(): LoginActivity
 }
