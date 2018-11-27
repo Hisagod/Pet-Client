@@ -1,6 +1,5 @@
 package com.aib.view.activity
 
-import android.databinding.ViewDataBinding
 
 import android.os.Bundle
 import com.aib.ll.R
