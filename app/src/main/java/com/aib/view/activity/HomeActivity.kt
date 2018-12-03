@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.widget.ImageView
-import com.aib.ll.R
-import com.aib.ll.databinding.ActivityHomeBinding
+import com.aib.pet.R
+import com.aib.pet.databinding.ActivityHomeBinding
 import com.aib.view.fragment.CenterFragment
 import com.aib.view.fragment.VideoFragment
 import com.blankj.utilcode.util.ActivityUtils
-import com.blankj.utilcode.util.LogUtils
 
 import java.util.ArrayList
 

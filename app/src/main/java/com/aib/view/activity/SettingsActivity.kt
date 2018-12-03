@@ -1,8 +1,8 @@
 package com.aib.view.activity
 
 import android.os.Bundle
-import com.aib.ll.R
-import com.aib.ll.databinding.ActivitySettingsBinding
+import com.aib.pet.R
+import com.aib.pet.databinding.ActivitySettingsBinding
 
 
 /**

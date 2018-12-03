@@ -3,8 +3,8 @@ package com.aib.view.activity
 import android.databinding.ViewDataBinding
 import android.os.Bundle
 import android.text.TextUtils
-import com.aib.ll.R
-import com.aib.ll.databinding.ActivityRegisterBinding
+import com.aib.pet.R
+import com.aib.pet.databinding.ActivityRegisterBinding
 import com.aib.viewmodel.RegisterViewModel
 import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.ToastUtils

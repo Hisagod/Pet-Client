@@ -3,7 +3,7 @@ package com.aib.view.activity
 import android.databinding.ViewDataBinding
 import android.os.Bundle
 
-import com.aib.ll.R
+import com.aib.pet.R
 import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.PermissionUtils
 import com.blankj.utilcode.util.ToastUtils
