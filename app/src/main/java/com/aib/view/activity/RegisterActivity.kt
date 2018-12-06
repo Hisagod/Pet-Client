@@ -1,12 +1,14 @@
 package com.aib.view.activity
 
-import android.databinding.ViewDataBinding
+import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.text.TextUtils
 import com.aib.pet.R
 import com.aib.pet.databinding.ActivityRegisterBinding
 import com.aib.viewmodel.RegisterViewModel
 import com.blankj.utilcode.util.ActivityUtils
+import com.blankj.utilcode.util.EncryptUtils
+import com.blankj.utilcode.util.RegexUtils
 import com.blankj.utilcode.util.ToastUtils
 import javax.inject.Inject
 
@@ -20,6 +22,8 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>() {
     override fun getResId(): Int = R.layout.activity_register
 
     override fun initData(savedInstanceState: Bundle?) {
+
+        binding.contr = this
 
         binding.tb.setNavigationOnClickListener {
             finish()
@@ -46,7 +50,21 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>() {
                 return@setOnClickListener
             }
 
+            vm.register(getPhone, EncryptUtils.encryptMD5ToString(getPwd)).observe(this@RegisterActivity, Observer {
+                ToastUtils.showLong(it!!.msg)
+            })
+        }
+    }
 
+    /**
+     * 当账户EditText文本发生改变
+     */
+    fun onAccountEditTextChange(s: CharSequence?, start: Int, before: Int, count: Int) {
+        if (!RegexUtils.isMobileExact(s)) {
+            binding.etAccountLayout.error = "格式错误"
+            binding.etAccountLayout.isErrorEnabled = true
+        } else {
+            binding.etAccountLayout.isErrorEnabled = false
         }
     }
 }

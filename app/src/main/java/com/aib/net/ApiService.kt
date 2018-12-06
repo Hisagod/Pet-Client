@@ -1,23 +1,17 @@
 package com.aib.net
 
-import com.aib.entity.VideoEntity
-
+import com.aib.entity.BaseEntity
 import io.reactivex.Observable
-import retrofit2.http.GET
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.POST
+
 
 interface ApiService {
-
-
     /**
-     * 视频列表
-     *
-     * @return
+     * 用户注册
      */
-    @GET("PageSubArea/TrailerList.api")
-    fun VIDEO_LIST(): Observable<VideoEntity>
-
-    companion object {
-        val videoApi = "http://api.m.mtime.cn/"
-    }
-
+    @POST("user/register")
+    @FormUrlEncoded
+    fun USER_REGISTER(@Field("phone") phone: String, @Field("pwd") pwd: String): Observable<BaseEntity<String>>
 }

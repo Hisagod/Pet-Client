@@ -2,6 +2,7 @@ package com.aib.di
 
 
 import com.aib.view.activity.*
+import com.aib.view.activity.RegisterActivity
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

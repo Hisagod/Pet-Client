@@ -2,6 +2,7 @@ package com.aib.di
 
 
 import com.aib.net.ApiService
+import com.aib.utils.Constants
 import com.blankj.utilcode.util.LogUtils
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
@@ -28,7 +29,7 @@ class AppModule {
                 .build()
 
         return Retrofit.Builder()
-                .baseUrl(ApiService.videoApi)
+                .baseUrl(Constants.BASE_URL)
                 .client(client)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())

@@ -33,7 +33,6 @@ abstract class BaseActivity<D : ViewDataBinding> : AppCompatActivity(), HasSuppo
 
     abstract fun initData(savedInstanceState: Bundle?)
 
-
     override fun supportFragmentInjector(): AndroidInjector<Fragment>? {
         return dispatchingAndroidInjector
     }
