@@ -3,6 +3,8 @@ package com.aib.view.activity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
+import android.view.Gravity
+import android.view.View
 import android.widget.ImageView
 import com.aib.pet.R
 import com.aib.pet.databinding.ActivityHomeBinding
@@ -20,6 +22,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     override fun getResId(): Int = R.layout.activity_home
 
     override fun initData(savedInstanceState: Bundle?) {
+
+        binding.contr = this
+
         fragments.add(VideoFragment())
         fragments.add(CenterFragment())
 
@@ -77,5 +82,12 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
             }
         }
         ft.commit()
+    }
+
+    /**
+     * 打开左侧菜单
+     */
+    fun openLeft(view: View) {
+        binding.dl.openDrawer(Gravity.START)
     }
 }

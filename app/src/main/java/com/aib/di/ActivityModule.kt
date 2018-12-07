@@ -16,29 +16,35 @@ internal abstract class ActivityModule {
      * 欢迎界面
      */
     @ContributesAndroidInjector
-    internal abstract fun SplashActivity(): SplashActivity
+    abstract fun SplashActivity(): SplashActivity
 
     /**
      * 主页
      */
     @ContributesAndroidInjector
-    internal abstract fun MainActivity(): HomeActivity
+    abstract fun MainActivity(): HomeActivity
 
     /**
      * 全部设置
      */
     @ContributesAndroidInjector
-    internal abstract fun SettingsActivity(): SettingsActivity
+    abstract fun SettingsActivity(): SettingsActivity
 
     /**
      * 注册
      */
     @ContributesAndroidInjector
-    internal abstract fun RegisterActivity(): RegisterActivity
+    abstract fun RegisterActivity(): RegisterActivity
 
     /**
      * 登录
      */
     @ContributesAndroidInjector
-    internal abstract fun LoginActivity(): LoginActivity
+    abstract fun LoginActivity(): LoginActivity
+
+    /**
+     * 关于app
+     */
+    @ContributesAndroidInjector
+    abstract fun AboutActivity(): AboutActivity
 }

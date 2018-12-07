@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
+    <data>
+
+        <variable
+            name="contr"
+            type="com.aib.view.activity.SettingsActivity" />
+    </data>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -67,6 +74,7 @@
                         android:drawableLeft="@drawable/ic_about"
                         android:drawablePadding="10dp"
                         android:gravity="center_vertical"
+                        android:onClick="@{contr::about}"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:text="关于"

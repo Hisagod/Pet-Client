@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.aib.pet">
 
-    <!--app权限-->
+    <!-- app权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -31,7 +31,8 @@
         <activity
             android:name="com.aib.view.activity.RegisterActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name="com.aib.view.activity.LoginActivity"></activity>
+        <activity android:name="com.aib.view.activity.LoginActivity" />
+        <activity android:name="com.aib.view.activity.AboutActivity"></activity>
     </application>
 
 </manifest>
