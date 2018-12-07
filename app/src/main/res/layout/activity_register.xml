@@ -6,6 +6,12 @@
         <variable
             name="contr"
             type="com.aib.view.activity.RegisterActivity" />
+
+        <variable
+            name="resource"
+            type="com.aib.net.Resource" />
+
+        <import type="com.aib.net.Status" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        app:showDialog="@{resource}"
         tools:context="com.aib.view.activity.RegisterActivity">
 
         <android.support.v7.widget.Toolbar

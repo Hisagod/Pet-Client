@@ -6,6 +6,7 @@ import android.databinding.ViewDataBinding
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import com.aib.widget.LoadingDialog
 
 import javax.inject.Inject
 
@@ -21,6 +22,8 @@ abstract class BaseActivity<D : ViewDataBinding> : AppCompatActivity(), HasSuppo
 
     lateinit var binding: D
 
+    private var loadingDialog: LoadingDialog? = null    //加载对话框
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,6 +35,24 @@ abstract class BaseActivity<D : ViewDataBinding> : AppCompatActivity(), HasSuppo
     abstract fun getResId(): Int
 
     abstract fun initData(savedInstanceState: Bundle?)
+
+    /**
+     * 显示对话框
+     */
+    fun showDialog() {
+        loadingDialog = LoadingDialog()
+        loadingDialog!!.isCancelable = false
+        loadingDialog!!.show(supportFragmentManager, "loadingDialog")
+    }
+
+    /**
+     * 取消对话框
+     */
+    fun dissDialog() {
+        if (loadingDialog != null) {
+            loadingDialog!!.dismiss()
+        }
+    }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment>? {
         return dispatchingAndroidInjector

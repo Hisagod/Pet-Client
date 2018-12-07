@@ -26,6 +26,7 @@ class AppModule {
                 .writeTimeout(5, TimeUnit.SECONDS)
                 .connectTimeout(5, TimeUnit.SECONDS)
                 .addInterceptor(loggingInterceptor)
+//                .addInterceptor(NetworkIntercepter())
                 .build()
 
         return Retrofit.Builder()
