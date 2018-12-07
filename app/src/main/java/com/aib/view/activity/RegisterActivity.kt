@@ -42,27 +42,28 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>() {
         }
 
         binding.btnRegister.setOnClickListener {
-            //            val getPhone = binding.etPhone.text.toString().trim()
-//            val getPwd = binding.etPwd.text.toString().trim()
-//
-//            if (TextUtils.isEmpty(getPhone)) {
-//                ToastUtils.showShort("请输入手机号")
-//                return@setOnClickListener
-//            }
-//
-//            if (TextUtils.isEmpty(getPwd)) {
-//                ToastUtils.showShort("请输入密码")
-//                return@setOnClickListener
-//            }
+            val getPhone = binding.etPhone.text.toString().trim()
+            val getPwd = binding.etPwd.text.toString().trim()
+
+            if (TextUtils.isEmpty(getPhone)) {
+                ToastUtils.showShort("请输入手机号")
+                return@setOnClickListener
+            }
+
+            if (TextUtils.isEmpty(getPwd)) {
+                ToastUtils.showShort("请输入密码")
+                return@setOnClickListener
+            }
 
 
             /**
              * 注册
              */
-            vm.register("15360060187", EncryptUtils.encryptMD5ToString("123456")).observe(this@RegisterActivity, Observer {
+            vm.register(getPhone, EncryptUtils.encryptMD5ToString(getPwd)).observe(this@RegisterActivity, Observer {
                 binding.resource = it
                 if (it!!.status == Status.SUCCESS) {
-                    ToastUtils.showShort(it.data!!.data)
+                    ToastUtils.showShort(it.data!!.msg)
+                    ActivityUtils.startActivity(LoginActivity::class.java)
                     finish()
                 }
             })
