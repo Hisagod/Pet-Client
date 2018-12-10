@@ -11,7 +11,7 @@ import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
 
 @Singleton
-@Component(modules = arrayOf(AndroidSupportInjectionModule::class, ActivityModule::class, FragmentModule::class, AppModule::class))
+@Component(modules = arrayOf(AndroidSupportInjectionModule::class, ActivityModule::class, FragmentModule::class, AppModule::class,ViewModelModule::class))
 interface AppComponent {
     fun inject(baseApplication: BaseApplication)
 }

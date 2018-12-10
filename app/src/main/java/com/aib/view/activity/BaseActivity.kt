@@ -15,8 +15,8 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 
 abstract class BaseActivity<D : ViewDataBinding> : AppCompatActivity(), HasSupportFragmentInjector {
-    @Inject
-    lateinit var factory: ViewModelProvider.Factory
+//    @Inject
+//    lateinit var factory: ViewModelProvider.Factory
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
 
